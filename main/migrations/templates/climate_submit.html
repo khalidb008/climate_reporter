@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Climate Submit</title>
+</head>
+<body>
+    <h1>Climate Submit</h1>
+    <p>Submitted data:</p>
+    <ul>
+        {% for key, value in submitted_data.items %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for climate in climate_data %}
+            <li>{{ climate.city }} ({{ climate.temperature }}°C, {{ climate.humidity }}%, {{ climate.wind_speed }}m/s, {{ climate.description }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

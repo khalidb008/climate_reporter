@@ -1,0 +1,23 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Climate data</title>
+</head>
+<body>
+    
+    <p>Submitted data:</p>
+    {% for climate in climatedata %}
+    <ul>
+        <li>City: {{ climate.city }}</li>
+        <li>Temperature: {{ climate.temperature }}</li>
+        <li>Flood: {{ climate.flood }}</li>
+        <li>Wind Speed: {{ climate.wind_speed }}</li>
+        <li>Carbon Emission: {{ climate.carbon_emission }}</li>
+        <li>Drought: {{ climate.drought }}</li>
+        <li>Rainfall: {{ climate.rainfall }}</li>
+    </ul>
+{% endfor %}
+</body>
+</html>
